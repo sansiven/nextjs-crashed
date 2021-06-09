@@ -38,7 +38,7 @@ export const getStaticPaths = async () => {
 
     //if fallback false no other ids a re supported, if true some dynamic ids are regenerated at runtime
     return {
-        fallback: false,
+        fallback: 'blocking',
         paths: meetups.map((meetup) => ({
             params: { meetupId: meetup._id.toString() },
         })),
